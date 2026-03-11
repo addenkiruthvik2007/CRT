@@ -1,13 +1,6 @@
-def isUgly(n: int) -> bool:
-    if n <= 0:
-        return False
-    for p in [2, 3, 5]:
-        while n % p == 0:
-            n //= p
+def count_digits(n: int) -> int:
+    return len(str(abs(n)))
 
-    return n == 1
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     n = int(input())
-    print(isUgly(n))
+    print(count_digits(n))
